@@ -1,0 +1,144 @@
+/*===================================================
+=           Esttilos generales
+===================================================*/
+.b-oscuro-mate{
+    background-color: #191919;
+}
+
+.font-color{
+    color: #7f8394;
+}
+
+.btn-color{
+    background-color: #1a2a2b;
+}
+
+.bg-color-main{
+    background-color: #436660;
+}
+
+body, html{
+    height: 100%;
+}
+
+.layout-grid{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+/*===================================================
+=           Barra de bavegacion
+===================================================*/
+.nav-grid-chil{
+    grid-row: 1;
+}
+
+@media(min-width:480px){
+    .nav-menu{
+        display: none;
+    }
+}
+
+/*===================================================
+=           Inicio
+===================================================*/
+.inicio-nota-nueva{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.inicio-nota-nueva div{
+    background-color: #fff;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+}
+
+.inicio-nota-nueva div:hover{
+    background-color: #b7e2e4;
+    transform: scale(1.3);
+}
+
+.inicio-grid{
+    display: grid;
+    grid-template-columns: auto;
+}
+.inicio-sider{
+    display: none;
+}
+.inicio-grid-chil{
+    grid-row: 2;
+    height: 100%;
+}
+
+.inicio-nota-vista{
+    overflow: scroll;
+}
+
+.inicio-caja-padre{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+
+    width: 95%;
+    margin: 0 auto;
+}
+
+.inicio-caja{
+    background-color: white;
+    height: 10rem;
+    text-align: center;
+}
+
+@media(min-width:480px){
+    .inicio-grid{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 0.5rem;
+    }
+    .inicio-sider{
+        display: block;
+    }
+    .inicio-caja-padre{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+    
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+@media(min-width:768px){
+    .inicio-caja-padre{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+    
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media(min-width:1024px){
+    .inicio-caja-padre{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 1rem;
+    
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.sider-show{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+
+    display: block;
+    width: 75%;
+    z-index: 99;
+}

@@ -35,12 +35,24 @@ class Usuarios extends Migration
             "secion"=>[
                 "type"=>"bool",
                 "null"=>true
+            ],
+            "created_at"=>[
+                "type"=>"TIMESTAMP",
+                "null"=>true
+            ],
+            "updated_at"=>[
+                "type"=>"TIMESTAMP",
+                "null"=>true
+            ],
+            "deleted_at"=>[
+                "type"=>"TIMESTAMP",
+                "null"=>true
             ]
         ]);
 
         $this->forge->addKey("id",true,true);
         $this->forge->addKey("nombre_usuario_o_correo",false,true,"correo");
-        $this->forge->createTable("usuarios",true,["engine"=>"innodb"]);
+        $this->forge->createTable("usuarios",false,["engine"=>"innodb"]);
     }
 
     public function down()

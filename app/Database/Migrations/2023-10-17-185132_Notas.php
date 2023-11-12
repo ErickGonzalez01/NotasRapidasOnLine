@@ -29,6 +29,18 @@ class Notas extends Migration
             "contenido"=>[
                  "type"=>"varchar",
                  "constraint"=>2500
+            ],            
+            "created_at"=>[
+                "type"=>"TIMESTAMP",
+                "null"=>true
+            ],
+            "updated_at"=>[
+                "type"=>"TIMESTAMP",
+                "null"=>true
+            ],
+            "deleted_at"=>[
+                "type"=>"TIMESTAMP",
+                "null"=>true
             ]
         ]);
 
@@ -36,11 +48,12 @@ class Notas extends Migration
         $this->forge->addKey("titulo",false,false,"titulo");
         $this->forge->addKey("id_usuario",false,false,"id_usuario");
         $this->forge->addForeignKey("id_usuario","usuarios","id","cascade","restricted","id_usuario_usuarios");
-        $this->forge->createTable("notas",true,["engine"=>"innodb"]);
+        $this->forge->createTable("notas",false,["engine"=>"innodb"]);
     }
 
     public function down()
     {
         //
+        $this->forge->dropTable("notas");
     }
 }
