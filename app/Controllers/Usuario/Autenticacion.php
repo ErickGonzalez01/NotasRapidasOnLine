@@ -63,6 +63,7 @@ class Autenticacion extends BaseController{
 
         $session = Services::session();
         $arrayDataSession=[
+            "id"=>$entityUsuario->id,
             "usuario"=>$entityUsuario->nombre_usuario_o_correo,
             "nombre"=>$entityUsuario->nombre,
             "apellido"=>$entityUsuario->apellido

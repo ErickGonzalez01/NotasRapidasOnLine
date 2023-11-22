@@ -27,8 +27,7 @@ class Notas extends Migration
                 "constraint"=>45
             ],
             "contenido"=>[
-                 "type"=>"varchar",
-                 "constraint"=>2500
+                 "type"=>"json",
             ],            
             "created_at"=>[
                 "type"=>"TIMESTAMP",

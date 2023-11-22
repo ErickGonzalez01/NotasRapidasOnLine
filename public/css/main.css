@@ -89,7 +89,21 @@ body, html{
 .inicio-caja{
     background-color: white;
     height: 10rem;
+    min-width: 12rem;
+    max-width: 15rem;
     text-align: center;
+    /*Overflow*/
+    overflow: hidden;
+    border-radius: 10px;
+}
+.inicio-caja p {
+    margin-bottom: 0rem;
+}
+.inicio-caja div {
+    height: 8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 2.5px;
 }
 
 @media(min-width:480px){
@@ -142,3 +156,4 @@ body, html{
     width: 75%;
     z-index: 99;
 }
+

@@ -11,7 +11,7 @@
             </div>
             <div class="mb-3">
                 <label for="contenido" class="form-label">Titulo</label>
-                <textarea class="form-control" name="contenido" id="contenido" cols="30" rows="10"></textarea>
+                <div id="quilljs"></div>
             </div>
             <div class="mb-3 d-flex justify-content-between">
                 <button id="nuevo-cancelar" class="btn btn-color font-color">Cancelar
@@ -42,27 +42,8 @@
             </div>
         </div>
     </section>
-    <section class="inicio-caja-padre">
-        <div class="inicio-caja">Caja 1</div>
-        <div class="inicio-caja">Caja 2</div>
-        <div class="inicio-caja">Caja 3</div>
-        <div class="inicio-caja">Caja 4</div>
-        <div class="inicio-caja">Caja 5</div>
-        <div class="inicio-caja">Caja 6</div>
-        <div class="inicio-caja">Caja 7</div>
-        <div class="inicio-caja">Caja 8</div>
-        <div class="inicio-caja">Caja 9</div>
-        <div class="inicio-caja">Caja 10</div>
-        <div class="inicio-caja">Caja 11</div>
-        <div class="inicio-caja">Caja 12</div>
-        <div class="inicio-caja">Caja 13</div>
-        <div class="inicio-caja">Caja 14</div>
-        <div class="inicio-caja">Caja 15</div>
-        <div class="inicio-caja">Caja 16</div>
-        <div class="inicio-caja">Caja 17</div>
-        <div class="inicio-caja">Caja 18</div>
-        <div class="inicio-caja">Caja 19</div>
-        <div class="inicio-caja">Caja 20</div>
+    <section id="list_notes" class="inicio-caja-padre">
+        <!--<div class="inicio-caja">Caja 1</div>-->
     </section>
 </div>
 
@@ -71,3 +52,4 @@
         <img src="/img/pencil.png" alt="lapiz">
     </div>
 </div>
+
