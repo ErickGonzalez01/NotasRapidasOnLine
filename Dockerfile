@@ -7,3 +7,5 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer install
 
 CMD [ "php", "spark", "serve" ]
+
+EXPOSE 80:8080
