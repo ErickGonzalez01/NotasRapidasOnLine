@@ -1,6 +1,7 @@
 /*===================================================
 =           Esttilos generales
 ===================================================*/
+
 .b-oscuro-mate{
     background-color: #191919;
 }
@@ -74,7 +75,8 @@ body, html{
 }
 
 .inicio-nota-vista{
-    overflow: scroll;
+    /*overflow: scroll;*/
+    height: 60vh;
 }
 
 .inicio-caja-padre{
@@ -95,15 +97,36 @@ body, html{
     /*Overflow*/
     overflow: hidden;
     border-radius: 10px;
+
+    /*Transicion*/
+    transition: transform 0.5s ease-in-out;
 }
+
+.inicio-caja:hover{
+    transform: scale(1.1);
+}
+
 .inicio-caja p {
     margin-bottom: 0rem;
 }
+
+.inicio-caja{
+    height: 60vh;
+    overflow: scroll;
+}
+
 .inicio-caja div {
     height: 8rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     border-radius: 2.5px;
+}
+
+.lista_titulos div{
+    transition: transform 0.5s ease-in-out;
+}
+.lista_titulos div:hover{
+    transform: scale(1.1);
 }
 
 @media(min-width:480px){

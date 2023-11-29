@@ -7,12 +7,12 @@ window.onload = function () {
     ListaNotas();
 }
 
-$(".inicio-caja").on("click", (e) => {
+/*$(".inicio-caja").on("click", (e) => {
     $(".inicio-caja-padre").hide();
     $("#main").show();
     $("#contenedor").removeAttr("style");
     $("#sider").show();
-})
+})*/
 
 $("#nuevo-cancelar").on("click", (e) => {
     $("#nuevo").hide();
@@ -83,42 +83,108 @@ function EnviarNuevaNota() {
     fetch(url_default + "/api/CrearNotas", request)
         .then(data => data.json())
         .then(onjeto => alert(onjeto));
-    
+
 }
 
-function LimpiarPizarra(){
+function LimpiarPizarra() {
     $("#titulo").val("");
-    let quill_remove = quill.deleteText(0,quill.getLength(),"api");
+    let quill_remove = quill.deleteText(0, quill.getLength(), "api");
     quill.setContents(quill_remove);
 }
 
-function ListaNotas(){
-    fetch(url_default + "/api/ListarNotas").then(response => response.json()).then((data)=>{
-        data.forEach((element) => ShowNewNota(element));
+var lista_de_notas={};
+
+async function ListaNotas() {
+    await fetch(url_default + "/api/ListarNotas").then(response => response.json()).then((data) => {
+        lista_de_notas=data;
+        //data.forEach((element) => ShowNewNota(element));
     });
+    await lista_de_notas.forEach((element) => ShowNewNota(element));
+    await console.log(lista_de_notas);
 };
 
-function ShowNewNota(element){
+//
+
+
+function ShowNewNota(element) {
 
     let contenedor = $("#list_notes");
 
-    let lis_notas= $("<div></div>")
+    let lis_notas = $("<div name=\"nnnn\"></div>");
     lis_notas.addClass("inicio-caja");
-    lis_notas.html("<p>"+element.titulo+"</p>");
+    lis_notas.html("<p>" + element.titulo + "</p>");
+    lis_notas.click(event => EventClick_InicioCaja(event));
+    //console.log(lis_notas);
 
     let quill_notas_contenedor = $("<div></div>");
-    quill_notas_contenedor.attr("id","nota_"+element.id);
+    quill_notas_contenedor.attr("id", "nota_" + element.id);
     lis_notas.append(quill_notas_contenedor);
     contenedor.append(lis_notas);
 
-    let op = {
-        modules:{
-            toolbar:false
-        },
-        readOnly:true,
-        theme: "snow"
-    }
+    let input_hidden = $("<input>");
+    input_hidden.attr({
+        type: "hidden",
+        value: element.id,
+        id: "id"
+    });
+
+    lis_notas.append(input_hidden);
+
     let json_object = JSON.parse(element.contenido);
-    quill_nota = new Quill("#nota_"+element.id,op);
+    let op = {
+        modules: {
+            toolbar: false
+        },
+        readOnly: true,
+        theme: "snow"
+    };
+    let editor_id = "#nota_" + element.id;
+    let quill_nota = new Quill(editor_id, op);
     quill_nota.setContents(json_object);
 }
+
+function EventClick_InicioCaja(element) {
+    let id = element.currentTarget.childNodes[2].value;
+    //let editor = element.currentTarget.childNodes[2].id;
+    //console.log(editor);
+    ViewNota();
+    InjectContentsQuill(id);
+}
+
+function ViewNota() {
+    $(".inicio-caja-padre").hide();
+    $("#main").show();
+    $("#contenedor").removeAttr("style");
+    $("#sider").show();
+    
+}
+
+function InjectContentsQuill(id){
+    let op = {
+        modules: {
+            toolbar: false
+        },
+        readOnly: true,
+        theme: "snow"
+    };
+    
+    let quill_set_for_view = new Quill("#view_quill_container",op);
+    //console.log(id);
+    let elemento_json = lista_de_notas.find(objeto => objeto.id==id);
+    let objeto_ops = JSON.parse(elemento_json.contenido);
+    quill_set_for_view.setContents(objeto_ops);
+    $("#view_id").text(elemento_json.titulo);
+    console.log(id);
+}
+
+function AgregarTitulosALaLista(){
+
+}
+function AgregarTituloALaLista(){
+
+}
+function EventCLick_TituloEnLaLista(){
+    
+}
+
+

@@ -1,6 +1,12 @@
 <div id="contenedor" class="bg-color-main p-2 inicio-grid-chil inicio-grid"> <!--class="inicio-grid"-->
     <section id="sider" class="card inicio-sider">
         <h2 class="ms-3">Recientes</h2>
+        <div id="sider_lista_titulos" class="lista_titulos" >
+            <div class="card p-2 m-2">tituos <input type="hidden" value="45"></div>
+            <div class="card p-2 m-2">tituos <input type="hidden" value="45"></div>
+            <div class="card p-2 m-2">tituos <input type="hidden" value="45"></div>
+            <div class="card p-2 m-2">tituos <input type="hidden" value="45"></div>
+        </div>
     </section>
     <main id="nuevo" class="card">
         <h2 class="ms-3">Notas nuevas</h2>
@@ -27,13 +33,12 @@
         <h2 class="ms-3">Vista de notas</h2>
         <div class="card m-1 p-1">
             <div>
-                <h4>Titulo</h4>
+                <h4 id="view_id">Titulo</h4>
             </div>
             <div class="card m-1 p-1 inicio-nota-vista">
-                <p>ipsum dolor sit amet consectetur adipisicing elit. Quia, ipsam. Officiis aspernatur minima possimus itaque maxime deleniti blanditiis sint officia, consequatur earum vitae quod aut minus illum. Error, tempore quasi?</p>
-                <p>ipsum dolor sit amet consectetur adipisicing elit. Quia, ipsam. Officiis aspernatur minima possimus itaque maxime deleniti blanditiis sint officia, consequatur earum vitae quod aut minus illum. Error, tempore quasi?</p>
-                <p>ipsum dolor sit amet consectetur adipisicing elit. Quia, ipsam. Officiis aspernatur minima possimus itaque maxime deleniti blanditiis sint officia, consequatur earum vitae quod aut minus illum. Error, tempore quasi?</p>
-                <p>ipsum dolor sit amet consectetur adipisicing elit. Quia, ipsam. Officiis aspernatur minima possimus itaque maxime deleniti blanditiis sint officia, consequatur earum vitae quod aut minus illum. Error, tempore quasi?</p>
+                <div id="view_quill_container">
+
+                </div>
             </div>
             <div>
                 <button id="main-editar" class="btn btn-primary">Editar</button>
