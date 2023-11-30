@@ -1,0 +1,46 @@
+ERROR - 2023-11-17 18:52:12 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '12345678', 'notas_app', 3306, '', 0)
+#1 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\Proyectos\NotasRapidasOnLine\app\Controllers\Usuario\Autenticacion.php(54): CodeIgniter\BaseModel->first()
+#7 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Usuario\Autenticacion->IniciarSesion()
+#8 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Autenticacion))
+#9 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Proyectos\NotasRapidasOnLine\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\No...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\Proyectos\NotasRapidasOnLine\app\Controllers\Usuario\Autenticacion.php(54): CodeIgniter\BaseModel->first()
+#6 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\Usuario\Autenticacion->IniciarSesion()
+#7 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Autenticacion))
+#8 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Proyectos\NotasRapidasOnLine\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\No...')
+#11 {main}
+CRITICAL - 2023-11-17 18:52:13 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `nombre_usuario_o_correo` = :nombre_usuario_o_correo:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Usuario\Autenticacion.php(54): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Usuario\Autenticacion->IniciarSesion()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Autenticacion))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
