@@ -1,4 +1,4 @@
-FROM php:8.2-cli
+FROM php
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 
@@ -8,4 +8,3 @@ RUN composer install
 
 CMD [ "php", "spark", "serve" ]
 
-EXPOSE 80:8080

@@ -1,5 +1,10 @@
-#proyecto 1
-#proyecto 1
-#proyecto 1
-#proyecto 1
-#proyecto 1
+
+services:
+  web:
+    imagen: notas_rapidas
+  db:
+    image: mysql
+
+    environment:
+      - name=value
+
