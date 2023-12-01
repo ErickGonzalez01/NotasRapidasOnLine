@@ -1,7 +1,7 @@
 version: "1"
 services:
   web:
-    imagen: notas_rapidas
+    imagen: notasrapidas:v1
     ports:
       -"80:80"
 
