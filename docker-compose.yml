@@ -1,7 +1,7 @@
 version: "1"
 services:
   web:
-    imagen: php:8.0-apache
+    image: php:8.0-apache
     volumes:
       -~/erick/notasrapidas/MAIN/NotasRapidasOnLine/NotasRapidasOnLine/public/:/var/www/html/
     command: php spark migrate;
