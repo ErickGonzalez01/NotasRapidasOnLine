@@ -5,8 +5,6 @@ services:
     volumes:
       -~/erick/notasrapidas/MAIN/NotasRapidasOnLine/NotasRapidasOnLine/public/:/var/www/html/
     command: php spark migrate;
-    environment:
-      
     links:
       -db
     ports:
