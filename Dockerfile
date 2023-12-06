@@ -1,7 +1,11 @@
 FROM php:8.0-apache
-COPY . /var/www/html/
+COPY . /var/www/
 
-ENV APACHE_DOCUMENT_ROOT /var/www/html/public/
+#ENV APACHE_DOCUMENT_ROOT /var/www/public
 
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+#RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' ##/etc/apache2/sites-available/*.conf
+#RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+RUN rm /etc/apache2/sites-available/000-default.conf
+
+COPY 000-default.conf /etc/apache2/sites-available/
