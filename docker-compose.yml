@@ -5,6 +5,6 @@ services:
         image: ucarodrigotrejo/codeigniter4-php-apache:latest
         container_name: 'codeigniter4-php-apache'
         ports:
-          - 80:80
+          - 8080:80
         volumes:
           - ./:/var/www/html
