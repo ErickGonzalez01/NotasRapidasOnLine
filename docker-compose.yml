@@ -3,8 +3,8 @@ version: "3"
 services:
     ci4-notasrapidas:
         image: ucarodrigotrejo/codeigniter4-php-apache:latest
-        container_name: 'codeigniter4-php-apache'
+        container_name: 'notasrapidas-001'
         ports:
-          - 8080:80
+          - 80:80
         volumes:
           - ./:/var/www/html
