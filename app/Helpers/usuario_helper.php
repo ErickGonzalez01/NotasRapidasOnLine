@@ -13,3 +13,18 @@ function GetInfoUsuario(){
     ];
     return $usuario;
 }
+
+function idUsuario(){
+    $service = Services::session();
+    return $service->get("id");
+}
+
+function GetInfoUserName(){
+    $service = Services::session();
+
+    $usuario = [
+        "nombre"=>$service->get("nombre"),
+        "apellido"=>$service->get("apellido")
+    ];
+    return $usuario;
+}

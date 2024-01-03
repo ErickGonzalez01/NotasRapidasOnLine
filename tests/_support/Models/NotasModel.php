@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Models;
+namespace Tests\Support\Models;
 
 use CodeIgniter\Model;
-use App\Entities\EntityUsuario;
+use App\Entities\EntityNotas;
 
-class ModelUsuario extends Model
+class NotasModel extends Model
 {
-    protected $DBGroup          = 'default';
-    protected $table            = 'usuarios';
+    protected $DBGroup          = 'tests';
+    protected $table            = 'notas';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = EntityUsuario::class;
-    protected $useSoftDeletes   = false;
+    protected $returnType       = EntityNotas::class;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = ["nombre","apellido","correo","contrasena","rcp_date","rcp_contrasena"];
+    protected $allowedFields    = ["id","id_usuario","fecha_creado","titulo","contenido"];
 
     // Dates
     protected $useTimestamps = true;

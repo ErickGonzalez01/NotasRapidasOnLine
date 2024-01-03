@@ -111,8 +111,7 @@ body, html{
 }
 
 .inicio-caja{
-    height: 60vh;
-    overflow: scroll;
+    height: 10rem;
 }
 
 .inicio-caja div {

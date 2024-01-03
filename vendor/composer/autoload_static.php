@@ -29,6 +29,7 @@ class ComposerStaticInit177c5a062ac668b05f1549bec64e3f64
         ),
         'F' => 
         array (
+            'Fluent\\Cors\\' => 12,
             'Faker\\' => 6,
         ),
         'D' => 
@@ -62,6 +63,10 @@ class ComposerStaticInit177c5a062ac668b05f1549bec64e3f64
         'Laminas\\Escaper\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-escaper/src',
+        ),
+        'Fluent\\Cors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src',
         ),
         'Faker\\' => 
         array (
@@ -1003,6 +1008,11 @@ class ComposerStaticInit177c5a062ac668b05f1549bec64e3f64
         'Faker\\Provider\\zh_TW\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/zh_TW/Text.php',
         'Faker\\UniqueGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/UniqueGenerator.php',
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/ValidGenerator.php',
+        'Fluent\\Cors\\Commands\\CorsCommand' => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src/Commands/CorsCommand.php',
+        'Fluent\\Cors\\Config\\Cors' => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src/Config/Cors.php',
+        'Fluent\\Cors\\Config\\Services' => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src/Config/Services.php',
+        'Fluent\\Cors\\Filters\\CorsFilter' => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src/Filters/CorsFilter.php',
+        'Fluent\\Cors\\ServiceCors' => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src/ServiceCors.php',
         'Laminas\\Escaper\\Escaper' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Escaper.php',
         'Laminas\\Escaper\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/ExceptionInterface.php',
         'Laminas\\Escaper\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/InvalidArgumentException.php',

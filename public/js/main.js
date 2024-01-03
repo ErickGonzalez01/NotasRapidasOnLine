@@ -27,10 +27,13 @@ $("#guardar").on("click", () => {
     //ListaNotas();
     LimpiarPizarra();
     $("#nuevo").hide();
+    $(".inicio-caja-padre").empty();    
     $(".inicio-caja-padre").show();
+    
     $("#sider").hide();
     $("#contenedor").css("grid-template-columns", "auto");
     $(".inicio-nota-nueva").show();
+    ListaNotas();
 });
 
 $("#main-cerrar").on("click", () => {
@@ -82,7 +85,8 @@ function EnviarNuevaNota() {
     };
     fetch(url_default + "/api/CrearNotas", request)
         .then(data => data.json())
-        .then(onjeto => alert(onjeto));
+        .then(onjeto => alert(onjeto))
+        .catch(err=>console.log(err));
 
 }
 
@@ -104,7 +108,11 @@ async function ListaNotas() {
 };
 
 //
-
+$("#titulo").keyup(function(event){
+    if(event.getLength==20){
+        alert("A superado el maximo de caracteres permitidos.")
+    }
+});
 
 function ShowNewNota(element) {
 

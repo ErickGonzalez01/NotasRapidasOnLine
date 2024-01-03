@@ -11,9 +11,9 @@ class NotasModel extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = EntityNotas::class;
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = ["id","id_usuario","fecha_creado","titulo","contenido",];
+    protected $allowedFields    = ["id","id_usuario","fecha_creado","titulo","contenido"];
 
     // Dates
     protected $useTimestamps = true;
@@ -38,4 +38,11 @@ class NotasModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    // Methods
+
+    public function notascol(){
+        $this->builder()->select("id, titulo, contenido");
+        return $this;
+    }
 }

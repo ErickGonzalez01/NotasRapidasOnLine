@@ -20,7 +20,7 @@
             </div>
             <div>
                 <label class="form-label" for="contraseña">contraseña</label>
-                <input class="form-control" type="text" name="contraseña" id="contraseña">
+                <input class="form-control" type="password" name="contraseña" id="contraseña">
             </div>
             <div>
                 <a href="<?=base_url("nuevo")?>">¿No tines cuenta? registrate</a>

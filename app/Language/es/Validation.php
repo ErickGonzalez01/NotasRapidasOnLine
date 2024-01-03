@@ -7,5 +7,7 @@ return [
     "min_length"        =>      "El campo '{field}' debe contener almenos {param} caracteres",
     "max_length"        =>      "El campo '{field}' debe contener un maximo de {param} caracteres",
     "matches"           =>      "El campo '{field}' no coinside",
-    "is_unique"         =>      "El usuario '{value}' ya exiate"
+    "is_unique"         =>      "El usuario '{value}' ya exiate",
+    "valid_email"       =>      "El correo electronico '{value}' no es valido",
+    "valid_json"        =>      "El campo '{field}' no es un objeto json valido"
 ];

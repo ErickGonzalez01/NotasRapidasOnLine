@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Database\Migrations;
+namespace Tests\Support\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
@@ -23,7 +23,7 @@ class Usuarios extends Migration
                 "type"=>"varchar",
                 "constraint"=>30,
             ],
-            "correo"=>[
+            "nombre_usuario_o_correo"=>[
                 "type"=>"varchar",
                 "constraint"=>45,
                 "unique"=>true
@@ -31,14 +31,9 @@ class Usuarios extends Migration
             "contrasena"=>[
                 "type"=>"char",
                 "constraint"=>60
-            ],//
-            "rcp_date"=>[
-                "type"=>"TIMESTAMP",
-                "null"=>true
             ],
-            "rcp_contrasena"=>[
-                "type"=>"char",
-                "constraint"=>60,
+            "secion"=>[
+                "type"=>"bool",
                 "null"=>true
             ],
             "created_at"=>[
@@ -56,7 +51,7 @@ class Usuarios extends Migration
         ]);
 
         $this->forge->addKey("id",true,true);
-        $this->forge->addKey("correo",false,true,"correo_key");
+        $this->forge->addKey("nombre_usuario_o_correo",false,true,"correo");
         $this->forge->createTable("usuarios",false,["engine"=>"innodb"]);
     }
 

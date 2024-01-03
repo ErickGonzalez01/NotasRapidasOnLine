@@ -1,20 +1,21 @@
 <?php
 
-namespace App\Models;
+namespace Tests\Support\Models;
 
 use CodeIgniter\Model;
+
 use App\Entities\EntityUsuario;
 
 class ModelUsuario extends Model
 {
-    protected $DBGroup          = 'default';
+    protected $DBGroup          = 'tests';
     protected $table            = 'usuarios';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = EntityUsuario::class;
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["nombre","apellido","correo","contrasena","rcp_date","rcp_contrasena"];
+    protected $allowedFields    = ["nombre","apellido","nombre_usuario_o_correo","contrasena","secion"];
 
     // Dates
     protected $useTimestamps = true;
