@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Notas;
 
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\NotasModel;
@@ -14,8 +14,10 @@ class ApiNotas extends ResourceController
     protected $format    = 'json';
     protected $helpers   = ["usuario"];
 
-    /** GET Path 'api/user/notes?page=1'
-     * Parametros get 'int page' para la paginacion 
+    /** Obtener notas GET 'api/user/notes?page=1'
+     * Metodo para obtener notas de usuario especifico
+     * Arguments
+     *      page 
      */
     public function index()
     {
@@ -32,9 +34,12 @@ class ApiNotas extends ResourceController
         return $this->respond(ResponseAPI::ResponseApiNotas(200, '', [], [$datos]), 200, ResponseAPI::HTTP_Code(200));
     }
 
-    /** POST /api/user/notes
+    /** Crearnota POST /api/user/notes
      * Metodo para crear una nota nueva
-     * recibe dos parametros post 'titulo y contenido
+     * Type: FormData
+     * Arguments
+     *      titulo
+     *      contenido
      */
     public function create()
     {
@@ -50,6 +55,7 @@ class ApiNotas extends ResourceController
             "contenido"     => "required|valid_json"
         ]);
 
+        //Validacion
         if (!$validation_dataPost) {
             return $this->respond(ResponseAPI::ResponseApiNotas(400, "Campos vacios", $this->validator->getErrors()), 400, ResponseAPI::HTTP_Code(400));
         }
@@ -58,7 +64,7 @@ class ApiNotas extends ResourceController
         return $this->respond(ResponseAPI::ResponseApiNotas(200, "Se ha guardado correctamente", [], ['id' => $id]), 200, ResponseAPI::HTTP_Code(200));
     }
 
-    /** GET /api/user/notes/{id}
+    /** Obtener notas por id GET '/api/user/notes/{id}'
      * Metodo para obtener una nota por el id por medio de segmento de url 
      */
     public function show($segment = 0)
@@ -66,24 +72,44 @@ class ApiNotas extends ResourceController
         return $this->respond(ResponseAPI::ResponseApiNotas(200, '', [], [$this->model->notascol()->where("id_usuario",idUsuario())->find($segment)]), 200, ResponseAPI::HTTP_Code(200));
     }
 
-    /** PUT PATH /api/user/notes/{id}
-     * Metodo para actualizar una nota recibe dos argumentos post 'titulo' y 'contenido'
+    /** Actualizar o modificar nota PUT PATH /api/user/notes/{id}
+     * Metodo para actualizar una nota
+     * Type: x-www-form-urlencoded
+     * Arguments
+     *      titulo
+     *      contenido
      * ademas se le para el id parmedio de la url
     */
     public function update($segment = 0)
     {
+        //Obtener el metod PUT o PATCH
         $strMethodHttp = $this->request->getMethod();
+
+        //Obteniendo la nota especificada
         $entityNota = $this->model->where("id_usuario",idUsuario())->find($segment); //filtrar por usuario pendiente 'where'
+
+        //Obtener datos put y patch
         $strPutTitulo = $this->request->getRawInput()["titulo"] ?? null;
         $strPutContenido = $this->request->getRawInput()["contenido"] ?? null;
+
+        //Estado de la actualizacion
         $status=false;
+
+        //Comprobando si la nota existe
         if($entityNota == null){
             return $this->respond(ResponseApi::ResponseApiNotas(200,"No se puede actualizar, nota no existe.",[],["status"=>$status]),200,ResponseAPI::HTTP_Code(200));
         }
+
+        //Switch para si la solicitud es put o si es patch
         switch($strMethodHttp){
-            case "put":
+
+            case "put": //Actualiza toda la nota
+
+                //Coprobar si los argumentos enviados existen
                 if($strPutContenido==null && $strPutTitulo==null) return $this->respond(ResponseApi::ResponseApiNotas(201,"Nada que actualizar.",[],["status"=>$status]),200,ResponseApi::HTTP_Code(200));
-                    if($this->validateData([
+                
+                //Validacion
+                if($this->validateData([
                         "titulo"    =>  $strPutTitulo,
                         "contenido" =>  $strPutContenido
                     ],[
@@ -98,7 +124,10 @@ class ApiNotas extends ResourceController
                     return $this->respond(ResponseApi::ResponseApiNotas(200,"Datos incompletos.",[$this->validator->getErrors()],["status"=>$status]),200,ResponseApi::HTTP_Code(200));
 
                 break;
-            case "patch":
+
+            case "patch": // Se actualisa solo el titulo o solo la nota
+
+                //Actualiza el titulo
                 if(!$strPutTitulo==null){
                     if($this->validateData(["titulo"=>$strPutTitulo],["titulo"=>"required|alpha_numeric_es|max_length[45]"])){
                         $entityNota->titulo = $strPutTitulo;
@@ -108,6 +137,7 @@ class ApiNotas extends ResourceController
                     return $this->respond(ResponseApi::ResponseApiNotas(201,"Datos incompletos.",[$this->validator->getErrors()],["status"=>$status]),200,ResponseApi::HTTP_Code(200));
                 }
                 
+                //Actualiza el contenido
                 if(!$strPutContenido==null){
                     if($this->validateData(["contenido"=>$strPutContenido],["contenido"=>"required|valid_json"])){
                         $entityNota->contenido = $strPutContenido;

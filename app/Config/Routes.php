@@ -8,7 +8,13 @@ use CodeIgniter\Router\RouteCollection;
 
  //$routes->useSupportedLocalesOnly(true);
  
-$routes->get('/', 'Home::index');
+$routes->get('/', function(){
+    return redirect("doc/notes");
+});
+
+$routes->get("doc/notes",function(){
+    return view("doc/notas");
+});
 
 $routes->group("api",function($routes){
     $routes->group("authentication",function($routes){
@@ -20,7 +26,7 @@ $routes->group("api",function($routes){
     });
     //api/user/notes/
     $routes->group("user",function($routes){
-        $routes->resource("notes",['controller' => 'ApiNotas','placeholder' => '(:num)','except'=>'new,edit,']);
+        $routes->resource("notes",['controller' => 'Notas\ApiNotas','placeholder' => '(:num)','except'=>'new,edit,']);
         
         $routes->get('logout','Usuario\Autenticacion::CerrarSecion');
     });
