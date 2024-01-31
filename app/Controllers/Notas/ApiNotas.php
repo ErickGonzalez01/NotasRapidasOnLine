@@ -69,7 +69,9 @@ class ApiNotas extends ResourceController
      */
     public function show($segment = 0)
     {
-        return $this->respond(ResponseAPI::ResponseApiNotas(200, '', [], [$this->model->notascol()->where("id_usuario",idUsuario())->find($segment)]), 200, ResponseAPI::HTTP_Code(200));
+        $datos = $this->model->notascol()->where("id_usuario",idUsuario())->find($segment);
+        //$json = json_decode($datos->contenido);
+        return $this->respond(ResponseAPI::ResponseApiNotas(200, '', [], [$datos]), 200, ResponseAPI::HTTP_Code(200));
     }
 
     /** Actualizar o modificar nota PUT PATH /api/user/notes/{id}
@@ -116,9 +118,15 @@ class ApiNotas extends ResourceController
                         "titulo"    =>  "required|alpha_numeric_es|max_length[45]",
                         "contenido" =>  "required|valid_json"
                     ])){
-                        $entityNota->titulo     =   $strPutTitulo;
-                        $entityNota->contenido  =   $strPutContenido;
-                        $status = $this->model->save($entityNota);
+                        
+                        $is_not_equals=$entityNota->IsNotEqualsUpdate(["titulo"=>$strPutTitulo, "contenido"=>$strPutContenido]);
+
+                        if($is_not_equals){
+                            $entityNota->titulo     =   $strPutTitulo;
+                            $entityNota->contenido  =   $strPutContenido;
+                            $status = $this->model->save($entityNota);
+                        }
+                        
                         return $this->respond(ResponseApi::ResponseApiNotas(201,"Se actualizo esta nota.",[],["status"=>$status]),200,ResponseAPI::HTTP_Code(200));
                     }
                     return $this->respond(ResponseApi::ResponseApiNotas(200,"Datos incompletos.",[$this->validator->getErrors()],["status"=>$status]),200,ResponseApi::HTTP_Code(200));
@@ -130,8 +138,12 @@ class ApiNotas extends ResourceController
                 //Actualiza el titulo
                 if(!$strPutTitulo==null){
                     if($this->validateData(["titulo"=>$strPutTitulo],["titulo"=>"required|alpha_numeric_es|max_length[45]"])){
-                        $entityNota->titulo = $strPutTitulo;
-                        $status =$this->model->save($entityNota);
+                        
+                        if($entityNota->IsNotEqualsUpdateTitulo(["titulo"=>$strPutTitulo])){
+                            $entityNota->titulo = $strPutTitulo;
+                            $entityNota->CorregitJson();
+                            $status =$this->model->save($entityNota);
+                        }                        
                         return $this->respond(ResponseApi::ResponseApiNotas(201,"Se actualizo el titulo.",[],["status"=>$status]),200,ResponseApi::HTTP_Code(200));
                     }
                     return $this->respond(ResponseApi::ResponseApiNotas(201,"Datos incompletos.",[$this->validator->getErrors()],["status"=>$status]),200,ResponseApi::HTTP_Code(200));
@@ -140,8 +152,14 @@ class ApiNotas extends ResourceController
                 //Actualiza el contenido
                 if(!$strPutContenido==null){
                     if($this->validateData(["contenido"=>$strPutContenido],["contenido"=>"required|valid_json"])){
-                        $entityNota->contenido = $strPutContenido;
-                        $status = $this->model->save($entityNota);
+                
+                        $is_not_exist=$entityNota->IsNotEqualsUpdateContenido(["contenido"=>$strPutContenido]);
+                        
+                        if($is_not_exist){
+                            $entityNota->contenido = $strPutContenido;
+                            $status = $this->model->save($entityNota);
+                        }
+
                         return $this->respond(ResponseApi::ResponseApiNotas(201,"Se actualizo el contenido.",[],["status"=>$status]),200,ResponseApi::HTTP_Code(200));
                     }
                     return $this->respond(ResponseApi::ResponseApiNotas(201,"Datos incompletos.",[$this->validator->getErrors()],["status"=>$status]),200,ResponseApi::HTTP_Code(200));

@@ -1,0 +1,15 @@
+:root {
+    --color-fondo-notas: #436660;
+    --color-fondo-navbar: #191919;
+    --color-fuente-navbar: #7f8394;
+    --color-btn-primario: #1a2a2b;
+    --color-fondo-nota: #ffffff;  
+  }
+  
+  :root {
+    --background-navbar: var(--color-fondo-navbar);
+    --background-notas: var(--color-fondo-notas);
+    --background-btn-primary: var(--color-btn-primario);
+    --background-nota: var(--color-fondo-nota);
+    --color-navbar: var(--color-fuente-navbar);
+  }

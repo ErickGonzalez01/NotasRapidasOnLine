@@ -5,15 +5,16 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-
- //$routes->useSupportedLocalesOnly(true);
  
-$routes->get('/', function(){
-    return redirect("doc/notes");
-});
+$routes->get('/', fn()=> redirect()->to("doc"));
 
-$routes->get("doc/notes",function(){
-    return view("doc/notas");
+$routes->group("doc",function($routes){
+
+    $routes->get("/",fn()=>view("doc/index"));
+
+    $routes->get("authentication",fn()=>view("doc/authentication"));
+
+    $routes->get("notes",fn()=>view("doc/notes"));
 });
 
 $routes->group("api",function($routes){

@@ -9,5 +9,6 @@ return [
     "matches"           =>      "El campo '{field}' no coinside",
     "is_unique"         =>      "El usuario '{value}' ya exiate",
     "valid_email"       =>      "El correo electronico '{value}' no es valido",
-    "valid_json"        =>      "El campo '{field}' no es un objeto json valido"
+    "valid_json"        =>      "El campo '{field}' no es un objeto json valido",
+    "is_not_unique"     =>      "El usuario '{value}' no existe."
 ];

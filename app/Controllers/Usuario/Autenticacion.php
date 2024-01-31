@@ -108,7 +108,7 @@ class Autenticacion extends BaseController
         ]);
 
         if (!$boolValidationDataPost) {
-            return $this->respond(ResponseAPI::ResponseApiNotas(401, "correo o contraseña incorrectos.", []), 401, ResponseApi::HTTP_Code(401));
+            return $this->respond(ResponseAPI::ResponseApiNotas(401, "correo o contraseña incorrectos.", [],["status"=>false]), 401, ResponseApi::HTTP_Code(401));
         }
 
         //buscando el usuario y asignandolo a la entity
@@ -220,7 +220,7 @@ class Autenticacion extends BaseController
 
         //Validacion
         if (!$this->validate([
-            "correo" => "required|no_space|valid_email",
+            "correo" => "required|no_space|valid_email|is_not_unique[usuarios.correo]",
             "rcp_contrasena" => "required|min_length[8]|max_length[12]",
             "nueva_contrasena" => "required|min_length[8]|max_length[12]",
             "confirmar_contrasena" => "required|min_length[8]|max_length[12]|matches[nueva_contrasena]",

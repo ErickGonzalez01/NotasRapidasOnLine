@@ -35,7 +35,7 @@ class NotasModel extends Model
     protected $beforeUpdate   = [];
     protected $afterUpdate    = [];
     protected $beforeFind     = [];
-    protected $afterFind      = [];
+    protected $afterFind      = ["JsonToArray"];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
@@ -44,5 +44,28 @@ class NotasModel extends Model
     public function notascol(){
         $this->builder()->select("id, titulo, contenido");
         return $this;
+    }
+
+    //Callbacks
+    public function JsonToArray($data){
+        $dataBase=$data["data"];
+        if(is_array($dataBase)){
+            $d=[];
+            foreach($dataBase as $enty){
+                $json = json_decode($enty->contenido,null,);
+                $enty->contenido = $json;
+                $d[] = $enty;            
+            }
+            $data["data"]=$dataBase;
+            return $data;
+        }
+
+        if(is_null($dataBase)){
+            return $data;
+        }
+
+        $json = json_decode($dataBase->contenido);
+        $data["data"]->contenido=$json;
+        return $data;        
     }
 }

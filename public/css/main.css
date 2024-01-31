@@ -1,181 +1,30 @@
-/*===================================================
-=           Esttilos generales
-===================================================*/
+@import './base.css';
 
-.b-oscuro-mate{
-    background-color: #191919;
+.bg-navbar{
+  background: var(--background-navbar);
+}
+.bg-notas{
+  background: var(--background-notas);
+}
+.bg-btn{
+  background: var(--background-btn-primary);
+}
+.bg-nota{
+  background: var(--background-nota);
+}
+.c-navbar{
+  color: var(--color-navbar);
+}
+.form-width{
+  width: 20rem;
 }
 
-.font-color{
-    color: #7f8394;
+.p-font{
+  font-family: "Chinese Quotes", "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  color: #8d8375;
 }
 
-.btn-color{
-    background-color: #1a2a2b;
+.pre{
+    color:#c8d8f1;
 }
-
-.bg-color-main{
-    background-color: #436660;
-}
-
-body, html{
-    height: 100%;
-}
-
-.layout-grid{
-    display: grid;
-    grid-template-rows: auto 1fr;
-    height: 100vh;
-}
-
-/*===================================================
-=           Barra de bavegacion
-===================================================*/
-.nav-grid-chil{
-    grid-row: 1;
-}
-
-@media(min-width:480px){
-    .nav-menu{
-        display: none;
-    }
-}
-
-/*===================================================
-=           Inicio
-===================================================*/
-.inicio-nota-nueva{
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-}
-
-.inicio-nota-nueva div{
-    background-color: #fff;
-    height: 37px;
-    width: 37px;
-    border-radius: 50%;
-}
-
-.inicio-nota-nueva div:hover{
-    background-color: #b7e2e4;
-    transform: scale(1.3);
-}
-
-.inicio-grid{
-    display: grid;
-    grid-template-columns: auto;
-}
-.inicio-sider{
-    display: none;
-}
-.inicio-grid-chil{
-    grid-row: 2;
-    height: 100%;
-}
-
-.inicio-nota-vista{
-    /*overflow: scroll;*/
-    height: 60vh;
-}
-
-.inicio-caja-padre{
-    display: grid;
-    grid-template-columns: auto;
-    gap: 1rem;
-
-    width: 95%;
-    margin: 0 auto;
-}
-
-.inicio-caja{
-    background-color: white;
-    height: 10rem;
-    min-width: 12rem;
-    max-width: 15rem;
-    text-align: center;
-    /*Overflow*/
-    overflow: hidden;
-    border-radius: 10px;
-
-    /*Transicion*/
-    transition: transform 0.5s ease-in-out;
-}
-
-.inicio-caja:hover{
-    transform: scale(1.1);
-}
-
-.inicio-caja p {
-    margin-bottom: 0rem;
-}
-
-.inicio-caja{
-    height: 10rem;
-}
-
-.inicio-caja div {
-    height: 8rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    border-radius: 2.5px;
-}
-
-.lista_titulos div{
-    transition: transform 0.5s ease-in-out;
-}
-.lista_titulos div:hover{
-    transform: scale(1.1);
-}
-
-@media(min-width:480px){
-    .inicio-grid{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: 0.5rem;
-    }
-    .inicio-sider{
-        display: block;
-    }
-    .inicio-caja-padre{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 1rem;
-    
-        width: 95%;
-        margin: 0 auto;
-    }
-}
-@media(min-width:768px){
-    .inicio-caja-padre{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 1rem;
-    
-        width: 80%;
-        margin: 0 auto;
-    }
-}
-
-@media(min-width:1024px){
-    .inicio-caja-padre{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        gap: 1rem;
-    
-        width: 80%;
-        margin: 0 auto;
-    }
-}
-
-.sider-show{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-
-    display: block;
-    width: 75%;
-    z-index: 99;
-}
-
