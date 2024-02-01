@@ -113,6 +113,11 @@ class Autenticacion extends BaseController
 
         //buscando el usuario y asignandolo a la entity
         $this->entity = $this->model->where("correo", $arrayPostInicio["correo"])->first();
+        //Linea 116
+
+        if($this->entity==null){
+            return $this->respond(ResponseAPI::ResponseApiNotas(401, "correo o contraseña incorrectos.", [], ["status" => false]), 401, ResponseApi::HTTP_Code(401));
+        }
 
         //comprobando si tiene contraseña de recuperacion
         if (!$this->entity->rcp_contrasena == null) {
