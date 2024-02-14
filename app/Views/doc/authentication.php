@@ -121,7 +121,7 @@
         <article class="bg-nota card rounded p-3 mt-2">
             <h4>Iniciar Sesion</h4>
             <h5><span class="badge text-bg-warning">POST</span> /api/authentication/login</h5>
-            <p>Autenticacion basada en secion.</p>
+            <p>Autenticacion basada en secion. <span class="badge rounded-pill text-bg-warning">*Se cambio por autenticacion por token.</span></p>
             <form class="card p-3" action="#">
                 <h5>Parametros de la solicitud</h5>
                 <p>Solicitud de tipo <span class="badge text-bg-secondary">FormData</span></p>
@@ -152,6 +152,7 @@
     "errors": [],
     "data": {
         "status": true,
+        "token": "eyJ0e"
         "user": {
             "nombre": "nombre",
             "apellido": "apellido"
@@ -331,7 +332,7 @@
             </div>
         </article>
         <article class="bg-nota card rounded p-3 mt-2 mb-2">
-            <h4>Cerrar secion</h4>
+            <h4>Cerrar secion <span class="badge rounded-pill text-bg-warning">*Este metodo se descontinuo.</span></h4>
             <h5><span class="badge text-bg-success">GET</span> /api/user/logout</h5>
             <p>Esta solicitud destruye la secion del usuario</p>
             <section class="card p-3 mt-2">

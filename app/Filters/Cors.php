@@ -5,23 +5,9 @@ namespace App\Filters;
 use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
-use CodeIgniter\Config\Services;
-use App\Libraries\Response\ResponseAPI;
-use \CodeIgniter\API\ResponseTrait;
 
-use App\Libraries\Autenticacion\AutenticacionJWT;
-
-class Autenticacion implements FilterInterface
+class Cors implements FilterInterface
 {
-    use ResponseTrait;
-    protected $response;// = Services::response();
-
-    public function __construct()
-    {
-        $this->response = Services::response();
-    }
-
-
     /**
      * Do whatever processing this filter needs to do.
      * By default it should not return anything during
@@ -40,21 +26,13 @@ class Autenticacion implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         //
-        /*$session = Services::session();
-        //$response = Services::response();
-
-        if($session->has("usuario")==false and $session->has("nombre")==false and $session->has("apellido")==false){
-
-            return $this->respond(ResponseAPI::ResponseApiNotas(401,"Primero debe iniciar secion.",[],["status"=>false]),401,ResponseAPI::HTTP_Code(401));
-        }*/
-
-        $autenticacion = new AutenticacionJWT();
-        $data = $autenticacion->GetDecode();
-        if($data ==null || is_string($data)){
-            return $this->respond(ResponseAPI::ResponseApiNotas(401,"Primero debe iniciar secion.",[],["status"=>false]),401,ResponseAPI::HTTP_Code(401));
+        header("Access-Control-Allow-Origin: *");
+        header("Access-Control-Allow-Headers: X-API-KEY, Origin,X-Requested-With, Content-Type, Accept, Access-Control-Requested-Method, Authorization");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PATCH, PUT, DELETE");
+        $method = $_SERVER['REQUEST_METHOD'];
+        if($method == "OPTIONS"){
+            die();
         }
-        //return $this->respond(ResponseAPI::ResponseApiNotas(401,"Primero debe iniciar secion.",[],["status"=>false]),401,ResponseAPI::HTTP_Code(401));
-
     }
 
     /**

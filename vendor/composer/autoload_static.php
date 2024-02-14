@@ -30,6 +30,7 @@ class ComposerStaticInit177c5a062ac668b05f1549bec64e3f64
         'F' => 
         array (
             'Fluent\\Cors\\' => 12,
+            'Firebase\\JWT\\' => 13,
             'Faker\\' => 6,
         ),
         'D' => 
@@ -67,6 +68,10 @@ class ComposerStaticInit177c5a062ac668b05f1549bec64e3f64
         'Fluent\\Cors\\' => 
         array (
             0 => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'Faker\\' => 
         array (
@@ -1008,6 +1013,14 @@ class ComposerStaticInit177c5a062ac668b05f1549bec64e3f64
         'Faker\\Provider\\zh_TW\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/zh_TW/Text.php',
         'Faker\\UniqueGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/UniqueGenerator.php',
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/ValidGenerator.php',
+        'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
+        'Firebase\\JWT\\CachedKeySet' => __DIR__ . '/..' . '/firebase/php-jwt/src/CachedKeySet.php',
+        'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
+        'Firebase\\JWT\\JWK' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWK.php',
+        'Firebase\\JWT\\JWT' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWT.php',
+        'Firebase\\JWT\\JWTExceptionWithPayloadInterface' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWTExceptionWithPayloadInterface.php',
+        'Firebase\\JWT\\Key' => __DIR__ . '/..' . '/firebase/php-jwt/src/Key.php',
+        'Firebase\\JWT\\SignatureInvalidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/SignatureInvalidException.php',
         'Fluent\\Cors\\Commands\\CorsCommand' => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src/Commands/CorsCommand.php',
         'Fluent\\Cors\\Config\\Cors' => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src/Config/Cors.php',
         'Fluent\\Cors\\Config\\Services' => __DIR__ . '/..' . '/agungsugiarto/codeigniter4-cors/src/Config/Services.php',
@@ -1902,8 +1915,11 @@ class ComposerStaticInit177c5a062ac668b05f1549bec64e3f64
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'Tests\\Support\\Database\\Seeds\\ExampleSeeder' => __DIR__ . '/../..' . '/tests/_support/Database/Seeds/ExampleSeeder.php',
+        'Tests\\Support\\Database\\Seeds\\Notas' => __DIR__ . '/../..' . '/tests/_support/Database/Seeds/Notas.php',
         'Tests\\Support\\Libraries\\ConfigReader' => __DIR__ . '/../..' . '/tests/_support/Libraries/ConfigReader.php',
         'Tests\\Support\\Models\\ExampleModel' => __DIR__ . '/../..' . '/tests/_support/Models/ExampleModel.php',
+        'Tests\\Support\\Models\\ModelUsuario' => __DIR__ . '/../..' . '/tests/_support/Models/ModelUsuario.php',
+        'Tests\\Support\\Models\\NotasModel' => __DIR__ . '/../..' . '/tests/_support/Models/NotasModel.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
         'TheSeer\\Tokenizer\\NamespaceUri' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUri.php',
         'TheSeer\\Tokenizer\\NamespaceUriException' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUriException.php',

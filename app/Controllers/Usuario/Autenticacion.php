@@ -13,6 +13,7 @@ use CodeIgniter\I18n\Time;
 use App\Libraries\Emails\Saludo;
 use App\Libraries\Autenticacion\Random;
 use App\Libraries\Emails\RecuperacionDePassWord;
+use App\Libraries\Autenticacion\AutenticacionJWT;
 
 class Autenticacion extends BaseController
 {
@@ -133,7 +134,9 @@ class Autenticacion extends BaseController
         }
 
         //Iniciando servicios de secion
+        /*
         $session = Services::session();
+        $session->start();
         $arrayDataSession = [
             "id" => $this->entity->id,
             "usuario" => $this->entity->correo,
@@ -141,9 +144,19 @@ class Autenticacion extends BaseController
             "apellido" => $this->entity->apellido
         ];
         $session->set($arrayDataSession);
+        */
+        $arrayDataSession = [
+            "id" => $this->entity->id,
+            "usuario" => $this->entity->correo,
+            "nombre" => $this->entity->nombre,
+            "apellido" => $this->entity->apellido
+        ];
 
+        $autJWT = new AutenticacionJWT();
+
+        $token = $autJWT->GetEncode($this->entity->correo,$arrayDataSession);
         //Retornando respuestas
-        return $this->respond(ResponseAPI::ResponseApiNotas(201, "Ha iniciado secion.", [], ["status" => true, "user" => GetInfoUserName()]), 201, ResponseApi::HTTP_Code(201));
+        return $this->respond(ResponseAPI::ResponseApiNotas(201, "Ha iniciado secion.", [], ["status" => true,"token" => $token, "user" => ["nombre" => $this->entity->nombre,"apellido" => $this->entity->apellido]]), 201, ResponseApi::HTTP_Code(201));
     }
     /** Cerrar sesion GET Path 'api/authentication/logout'
      * Endpoin para cerrar secion
@@ -151,10 +164,10 @@ class Autenticacion extends BaseController
     public function CerrarSecion()
     {
         //Creando intancia de la clase de secion
-        $session = Services::session();
+        /*$session = Services::session();
         $session->destroy(); //destruyendo la secion
         $session->close(); //cerrando secion
-        return $this->respond(ResponseAPI::ResponseApiNotas(200, "Ha cerrado secion.", [], ["status" => false]), 200, ResponseApi::HTTP_Code(200));
+        return $this->respond(ResponseAPI::ResponseApiNotas(200, "Ha cerrado secion.", [], ["status" => false]), 200, ResponseApi::HTTP_Code(200));*/
     }
 
     /** Recuperar contraseña POST 'api/authentication/recoverypassword'

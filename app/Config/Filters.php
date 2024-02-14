@@ -9,6 +9,7 @@ use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\Autenticacion;
+use App\Filters\Cors;
 use Fluent\Cors\Filters\CorsFilter;
 
 class Filters extends BaseConfig
@@ -27,7 +28,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'auth'          => Autenticacion::class,
-        'cors'          => CorsFilter::class
+        'cors'          => Cors::class
     ];
 
     /**
@@ -39,16 +40,14 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
-            // 'honeypot',
-            // 'csrf',
-            // 'invalidchars',
-            'auth'=>['except'=>["api/authentication/*","/","doc/*","doc"]
-        ]
+            'cors' => [
+                'except' => ['/','doc','doc/*']
+            ]
         ],
         'after' => [
-            'toolbar',
-            // 'honeypot',
-            // 'secureheaders',
+            'cors' => [
+                'except' => ['/','doc','doc/*']
+            ]
         ],
     ];
 
@@ -73,9 +72,8 @@ class Filters extends BaseConfig
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
     public array $filters = [
-        'cors'=>[
-            'before'=>'api/*',
-            'after'=>'api/*'
+        'auth'  =>  [
+            'before'    =>  ['api/user/*']
         ]
     ];
 }

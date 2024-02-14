@@ -1,30 +1,26 @@
 <?php
 
-use Config\Services;
+use App\Libraries\Autenticacion\AutenticacionJWT;
 
-function GetInfoUsuario(){
-    $service = Services::session();
-
-    $usuario = [
-        "id"=>$service->get("id"),
-        "usuario"=>$service->get("usuario"),
-        "nombre"=>$service->get("nombre"),
-        "apellido"=>$service->get("apellido")
-    ];
-    return $usuario;
+function data(){
+    $autentication = new AutenticacionJWT();
+    $data = $autentication->GetDecode();
+    return $data;
 }
 
-function idUsuario(){
-    $service = Services::session();
-    return $service->get("id");
+
+function GetInfoUsuario(){
+    return data();
+}
+
+function idUsuario(){    
+    return data()["id"];
 }
 
 function GetInfoUserName(){
-    $service = Services::session();
-
     $usuario = [
-        "nombre"=>$service->get("nombre"),
-        "apellido"=>$service->get("apellido")
+        "nombre"=>data()["nombre"],
+        "apellido"=>data()["apellido"]
     ];
     return $usuario;
 }
