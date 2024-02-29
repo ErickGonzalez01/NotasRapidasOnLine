@@ -30,7 +30,7 @@ class AuthJWT extends ConfigBaseJWT{
      * Tiempo de valides del token en segundos
      * @var int
      */
-    protected $exp = 3600;
+    protected $exp = 1200;
 
     /**
      * Firma para jwt
