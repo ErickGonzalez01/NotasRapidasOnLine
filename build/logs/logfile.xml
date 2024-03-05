@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="DecodeTest" file="C:\Proyectos\NotasRapidasOnLine\tests\app\Libraries\Autenticacion\DecodeTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.574911">
+    <testcase name="testCodificarYDecodificarElToken" class="DecodeTest" classname="DecodeTest" file="C:\Proyectos\NotasRapidasOnLine\tests\app\Libraries\Autenticacion\DecodeTest.php" line="45" assertions="1" time="0.574911">
+      <system-out>Array
+(
+    [nombre] =&gt; Juan Gonzalez
+)
+Array
+(
+    [nombre] =&gt; Juan Gonzalez
+)
+</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

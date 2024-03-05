@@ -1,0 +1,34 @@
+INFO - 2023-12-27 12:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-27 12:05:02 --> The route for "inicio" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('inicio')
+ 2 APPPATH\Filters\Autenticacion.php(34): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-27 15:27:03 --> App\Controllers\ApiNotas::ResponseApiNotas(): Argument #4 ($data) must be of type array, App\Entities\EntityNotas given, called in C:\Proyectos\NotasRapidasOnLine\app\Controllers\ApiNotas.php on line 83
+in APPPATH\Controllers\ApiNotas.php on line 97.
+ 1 APPPATH\Controllers\ApiNotas.php(83): App\Controllers\ApiNotas->ResponseApiNotas(200, '', [], Object(App\Entities\EntityNotas))
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->show('1252')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-27 21:26:52 --> Access to undeclared static property App\Libraries\Response\ResponseAPI::$http_codes
+in APPPATH\Libraries\Response\ResponseAPI.php on line 69.
+ 1 APPPATH\Controllers\ApiNotas.php(75): App\Libraries\Response\ResponseAPI::HTTP_Code(400)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-27 21:27:27 --> El argumento ingresado no es valido
+in APPPATH\Libraries\Response\ResponseAPI.php on line 70.
+ 1 APPPATH\Controllers\ApiNotas.php(75): App\Libraries\Response\ResponseAPI::HTTP_Code(400)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')

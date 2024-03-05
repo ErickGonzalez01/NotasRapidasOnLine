@@ -1,0 +1,160 @@
+CRITICAL - 2023-12-23 10:25:39 --> The route for "inicio" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('inicio')
+ 2 APPPATH\Filters\Autenticacion.php(34): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-23 10:26:03 --> Declaration of App\Controllers\ApiNotas::show($segment) must be compatible with CodeIgniter\RESTful\ResourceController::show($id = null)
+in APPPATH\Controllers\ApiNotas.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-23 10:26:41 --> Declaration of App\Controllers\ApiNotas::show($segment) must be compatible with CodeIgniter\RESTful\ResourceController::show($id = null)
+in APPPATH\Controllers\ApiNotas.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-23 10:29:03 --> Declaration of App\Controllers\ApiNotas::edit() must be compatible with CodeIgniter\RESTful\ResourceController::edit($id = null)
+in APPPATH\Controllers\ApiNotas.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-23 10:37:28 --> Declaration of App\Controllers\ApiNotas::edit() must be compatible with CodeIgniter\RESTful\ResourceController::edit($id = null)
+in APPPATH\Controllers\ApiNotas.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-23 10:38:03 --> Declaration of App\Controllers\ApiNotas::edit() must be compatible with CodeIgniter\RESTful\ResourceController::edit($id = null)
+in APPPATH\Controllers\ApiNotas.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-23 10:39:39 --> Declaration of App\Controllers\ApiNotas::edit() must be compatible with CodeIgniter\RESTful\ResourceController::edit($id = null)
+in APPPATH\Controllers\ApiNotas.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-23 10:40:14 --> Declaration of App\Controllers\ApiNotas::edit() must be compatible with CodeIgniter\RESTful\ResourceController::edit($id = null)
+in APPPATH\Controllers\ApiNotas.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-23 10:52:16 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '12345678', 'notas_app', 3306, '', 0)
+#1 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Proyectos\NotasRapidasOnLine\app\Controllers\ApiNotas.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+#8 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+#9 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Proyectos\NotasRapidasOnLine\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\No...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Proyectos\NotasRapidasOnLine\app\Controllers\ApiNotas.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+#7 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+#8 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Proyectos\NotasRapidasOnLine\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\No...')
+#11 {main}
+CRITICAL - 2023-12-23 10:52:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `notas`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ApiNotas.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-23 11:03:42 --> Call to undefined method App\Models\NotasModel::fin
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\ApiNotas.php(17): CodeIgniter\Model->__call('fin', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-23 11:19:55 --> array_map(): Argument #2 ($array) must be of type array, CodeIgniter\HTTP\Response given
+in APPPATH\Controllers\ApiNotas.php on line 18.
+ 1 APPPATH\Controllers\ApiNotas.php(18): array_map(Object(Closure), Object(CodeIgniter\HTTP\Response))
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-23 11:21:21 --> Attempt to read property "id" on string
+in APPPATH\Controllers\ApiNotas.php on line 19.
+ 1 APPPATH\Controllers\ApiNotas.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on string', 'C:\\Proyectos\\NotasRapidasOnLine\\app\\Controllers\\ApiNotas.php', 19)
+ 2 [internal function]: App\Controllers\ApiNotas->App\Controllers\{closure}('OK')
+ 3 APPPATH\Controllers\ApiNotas.php(20): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-23 11:22:22 --> Attempt to read property "id" on string
+in APPPATH\Controllers\ApiNotas.php on line 19.
+ 1 APPPATH\Controllers\ApiNotas.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on string', 'C:\\Proyectos\\NotasRapidasOnLine\\app\\Controllers\\ApiNotas.php', 19)
+ 2 [internal function]: App\Controllers\ApiNotas->App\Controllers\{closure}('OK')
+ 3 APPPATH\Controllers\ApiNotas.php(20): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-23 11:26:08 --> Attempt to read property "id" on string
+in APPPATH\Controllers\ApiNotas.php on line 19.
+ 1 APPPATH\Controllers\ApiNotas.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on string', 'C:\\Proyectos\\NotasRapidasOnLine\\app\\Controllers\\ApiNotas.php', 19)
+ 2 [internal function]: App\Controllers\ApiNotas->App\Controllers\{closure}('OK')
+ 3 APPPATH\Controllers\ApiNotas.php(20): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+ERROR - 2023-12-23 11:55:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL
+AND `notas`.`deleted_at` IS NULL' at line 3 in C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Proyectos\NotasRapidasOnLine\app\Controllers\ApiNotas.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+#8 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+#9 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Proyectos\NotasRapidasOnLine\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Proyectos\NotasRapidasOnLine\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\No...')
+#12 {main}
+CRITICAL - 2023-12-23 11:55:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL
+AND `notas`.`deleted_at` IS NULL' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `notas`
+WHERE  IS NULL
+AND `notas`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ApiNotas.php(18): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ApiNotas->new()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiNotas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2023-12-23 11:57:44 --> The route for "inicio" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('inicio')
+ 2 APPPATH\Filters\Autenticacion.php(34): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')

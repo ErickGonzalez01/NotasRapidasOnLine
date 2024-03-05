@@ -1,0 +1,70 @@
+INFO - 2024-02-13 10:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-13 10:38:16 --> App\Libraries\Autenticacion\App\DecodeJWT::__construct(): Argument #2 ($data) must be of type string, null given, called in C:\Proyectos\NotasRapidasOnLine\app\Libraries\Autenticacion\AutenticacionJWT.php on line 34
+in APPPATH\Libraries\Autenticacion\app\DecodeJWT.php on line 16.
+ 1 APPPATH\Libraries\Autenticacion\AutenticacionJWT.php(34): App\Libraries\Autenticacion\App\DecodeJWT->__construct(Object(App\Libraries\Autenticacion\Config\AuthJWT), null)
+ 2 APPPATH\Filters\Autenticacion.php(52): App\Libraries\Autenticacion\AutenticacionJWT->GetDecode()
+ 3 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('api/user/notes/1', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-13 10:39:49 --> App\Libraries\Autenticacion\App\DecodeJWT::__construct(): Argument #2 ($data) must be of type string, null given, called in C:\Proyectos\NotasRapidasOnLine\app\Libraries\Autenticacion\AutenticacionJWT.php on line 34
+in APPPATH\Libraries\Autenticacion\app\DecodeJWT.php on line 16.
+ 1 APPPATH\Libraries\Autenticacion\AutenticacionJWT.php(34): App\Libraries\Autenticacion\App\DecodeJWT->__construct(Object(App\Libraries\Autenticacion\Config\AuthJWT), null)
+ 2 APPPATH\Filters\Autenticacion.php(52): App\Libraries\Autenticacion\AutenticacionJWT->GetDecode()
+ 3 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('api/user/notes/1', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-13 10:42:36 --> Undefined property: App\Libraries\Autenticacion\App\ObjetoJwt::$getError
+in APPPATH\Libraries\Autenticacion\AutenticacionJWT.php on line 39.
+ 1 APPPATH\Libraries\Autenticacion\AutenticacionJWT.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\Autenticacion\\App\\ObjetoJwt::$getError', 'C:\\Proyectos\\NotasRapidasOnLine\\app\\Libraries\\Autenticacion\\AutenticacionJWT.php', 39)
+ 2 APPPATH\Filters\Autenticacion.php(52): App\Libraries\Autenticacion\AutenticacionJWT->GetDecode()
+ 3 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('api/user/notes/1', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-13 10:44:43 --> Error al decodificar el token: Siempre que JWT tenga un formato incorrecto O
+Siempre que a JWT le falte un algoritmo / use un algoritmo no compatible O
+El algoritmo JWT proporcionado no coincide con la clave proporcionada O
+El ID de clave proporcionado en clave/matriz de claves está vacío o no es válido.
+in APPPATH\Libraries\Autenticacion\AutenticacionJWT.php on line 39.
+ 1 APPPATH\Filters\Autenticacion.php(52): App\Libraries\Autenticacion\AutenticacionJWT->GetDecode()
+ 2 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('api/user/notes/1', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-13 10:51:25 --> Call to a member function setContentType() on null
+in SYSTEMPATH\API\ResponseTrait.php on line 331.
+ 1 SYSTEMPATH\API\ResponseTrait.php(98): App\Filters\Autenticacion->format([...])
+ 2 APPPATH\Filters\Autenticacion.php(54): App\Filters\Autenticacion->respond([...], 401, 'No autorizado')
+ 3 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('api/user/notes/1', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-13 10:53:29 --> Error al decodificar el token: Siempre que JWT tenga un formato incorrecto O
+Siempre que a JWT le falte un algoritmo / use un algoritmo no compatible O
+El algoritmo JWT proporcionado no coincide con la clave proporcionada O
+El ID de clave proporcionado en clave/matriz de claves está vacío o no es válido.
+in APPPATH\Libraries\Autenticacion\AutenticacionJWT.php on line 39.
+ 1 APPPATH\Filters\Autenticacion.php(52): App\Libraries\Autenticacion\AutenticacionJWT->GetDecode()
+ 2 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('api/user/notes/1', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+INFO - 2024-02-13 11:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-13 11:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-13 11:48:44 --> Cannot access offset of type string on string
+in APPPATH\Helpers\usuario_helper.php on line 22.
+ 1 APPPATH\Controllers\Usuario\Autenticacion.php(159): GetInfoUserName()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Usuario\Autenticacion->IniciarSesion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Autenticacion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')

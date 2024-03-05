@@ -1,0 +1,6 @@
+CRITICAL - 2024-02-11 11:51:26 --> App\Libraries\Autenticacion\App\Decode cannot implement App\Libraries\Autenticacion\Abstract\EnDeJwtBase - it is not an interface
+in APPPATH\Libraries\Autenticacion\app\EncodeJWT.php on line 10.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-02-11 12:08:57 --> App\Libraries\Autenticacion\App\EncodeJWT cannot implement App\Libraries\Autenticacion\Abstract\EnDeJwtBase - it is not an interface
+in APPPATH\Libraries\Autenticacion\app\EncodeJWT.php on line 10.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

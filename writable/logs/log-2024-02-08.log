@@ -1,0 +1,151 @@
+CRITICAL - 2024-02-08 08:56:33 --> Using the "SameSite=None" attribute requires setting the "Secure" attribute.
+in SYSTEMPATH\Cookie\Cookie.php on line 784.
+ 1 SYSTEMPATH\Cookie\Cookie.php(784): CodeIgniter\Cookie\Exceptions\CookieException::forInvalidSameSiteNone()
+ 2 SYSTEMPATH\Cookie\Cookie.php(231): CodeIgniter\Cookie\Cookie->validateSameSite('none', false)
+ 3 SYSTEMPATH\Session\Session.php(192): CodeIgniter\Cookie\Cookie->__construct('ci_session', '', [...])
+ 4 SYSTEMPATH\Config\Services.php(689): CodeIgniter\Session\Session->__construct(Object(CodeIgniter\Session\Handlers\FileHandler), Object(Config\Session))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 9 APPPATH\Controllers\Usuario\Autenticacion.php(136): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Usuario\Autenticacion->IniciarSesion()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Autenticacion))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-08 08:58:59 --> Using the "SameSite=None" attribute requires setting the "Secure" attribute.
+in SYSTEMPATH\Cookie\Cookie.php on line 784.
+ 1 SYSTEMPATH\Cookie\Cookie.php(784): CodeIgniter\Cookie\Exceptions\CookieException::forInvalidSameSiteNone()
+ 2 SYSTEMPATH\Cookie\Cookie.php(231): CodeIgniter\Cookie\Cookie->validateSameSite('none', false)
+ 3 SYSTEMPATH\Session\Session.php(192): CodeIgniter\Cookie\Cookie->__construct('ci_session', '', [...])
+ 4 SYSTEMPATH\Config\Services.php(689): CodeIgniter\Session\Session->__construct(Object(CodeIgniter\Session\Handlers\FileHandler), Object(Config\Session))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 9 APPPATH\Controllers\Usuario\Autenticacion.php(136): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Usuario\Autenticacion->IniciarSesion()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Autenticacion))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-08 09:05:15 --> Using the "SameSite=None" attribute requires setting the "Secure" attribute.
+in SYSTEMPATH\Cookie\Cookie.php on line 784.
+ 1 SYSTEMPATH\Cookie\Cookie.php(784): CodeIgniter\Cookie\Exceptions\CookieException::forInvalidSameSiteNone()
+ 2 SYSTEMPATH\Cookie\Cookie.php(231): CodeIgniter\Cookie\Cookie->validateSameSite('None', false)
+ 3 SYSTEMPATH\Session\Session.php(192): CodeIgniter\Cookie\Cookie->__construct('ci_session', '', [...])
+ 4 SYSTEMPATH\Config\Services.php(689): CodeIgniter\Session\Session->__construct(Object(CodeIgniter\Session\Handlers\FileHandler), Object(Config\Session))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 9 APPPATH\Controllers\Usuario\Autenticacion.php(136): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Usuario\Autenticacion->IniciarSesion()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Autenticacion))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+INFO - 2024-02-08 09:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-08 09:22:22 --> Using the "SameSite=None" attribute requires setting the "Secure" attribute.
+in SYSTEMPATH\Cookie\Cookie.php on line 784.
+ 1 SYSTEMPATH\Cookie\Cookie.php(784): CodeIgniter\Cookie\Exceptions\CookieException::forInvalidSameSiteNone()
+ 2 SYSTEMPATH\Cookie\Cookie.php(231): CodeIgniter\Cookie\Cookie->validateSameSite('None', false)
+ 3 SYSTEMPATH\Session\Session.php(192): CodeIgniter\Cookie\Cookie->__construct('ci_session', '', [...])
+ 4 SYSTEMPATH\Config\Services.php(689): CodeIgniter\Session\Session->__construct(Object(CodeIgniter\Session\Handlers\FileHandler), Object(Config\Session))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 APPPATH\Filters\Autenticacion.php(41): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('api/user/logout', 'before')
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-08 09:22:43 --> Using the "SameSite=None" attribute requires setting the "Secure" attribute.
+in SYSTEMPATH\Cookie\Cookie.php on line 784.
+ 1 SYSTEMPATH\Cookie\Cookie.php(784): CodeIgniter\Cookie\Exceptions\CookieException::forInvalidSameSiteNone()
+ 2 SYSTEMPATH\Cookie\Cookie.php(231): CodeIgniter\Cookie\Cookie->validateSameSite('None', false)
+ 3 SYSTEMPATH\Session\Session.php(192): CodeIgniter\Cookie\Cookie->__construct('ci_session', '', [...])
+ 4 SYSTEMPATH\Config\Services.php(689): CodeIgniter\Session\Session->__construct(Object(CodeIgniter\Session\Handlers\FileHandler), Object(Config\Session))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 9 APPPATH\Controllers\Usuario\Autenticacion.php(136): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Usuario\Autenticacion->IniciarSesion()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Autenticacion))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+INFO - 2024-02-08 09:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-08 09:36:46 --> Using the "SameSite=None" attribute requires setting the "Secure" attribute.
+in SYSTEMPATH\Cookie\Cookie.php on line 784.
+ 1 SYSTEMPATH\Cookie\Cookie.php(784): CodeIgniter\Cookie\Exceptions\CookieException::forInvalidSameSiteNone()
+ 2 SYSTEMPATH\Cookie\Cookie.php(231): CodeIgniter\Cookie\Cookie->validateSameSite('none', false)
+ 3 SYSTEMPATH\Session\Session.php(192): CodeIgniter\Cookie\Cookie->__construct('ci_session', '', [...])
+ 4 SYSTEMPATH\Config\Services.php(689): CodeIgniter\Session\Session->__construct(Object(CodeIgniter\Session\Handlers\FileHandler), Object(Config\Session))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 APPPATH\Filters\Autenticacion.php(41): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('api/user/logout', 'before')
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-08 09:38:28 --> Using the "SameSite=None" attribute requires setting the "Secure" attribute.
+in SYSTEMPATH\Cookie\Cookie.php on line 784.
+ 1 SYSTEMPATH\Cookie\Cookie.php(784): CodeIgniter\Cookie\Exceptions\CookieException::forInvalidSameSiteNone()
+ 2 SYSTEMPATH\Cookie\Cookie.php(231): CodeIgniter\Cookie\Cookie->validateSameSite('none', false)
+ 3 SYSTEMPATH\Session\Session.php(192): CodeIgniter\Cookie\Cookie->__construct('ci_session', '', [...])
+ 4 SYSTEMPATH\Config\Services.php(689): CodeIgniter\Session\Session->__construct(Object(CodeIgniter\Session\Handlers\FileHandler), Object(Config\Session))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 APPPATH\Filters\Autenticacion.php(41): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH\Filters\Filters.php(186): App\Filters\Autenticacion->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('api/user/logout', 'before')
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+CRITICAL - 2024-02-08 09:43:41 --> Using the "SameSite=None" attribute requires setting the "Secure" attribute.
+in SYSTEMPATH\Cookie\Cookie.php on line 784.
+ 1 SYSTEMPATH\Cookie\Cookie.php(784): CodeIgniter\Cookie\Exceptions\CookieException::forInvalidSameSiteNone()
+ 2 SYSTEMPATH\Cookie\Cookie.php(231): CodeIgniter\Cookie\Cookie->validateSameSite('none', false)
+ 3 SYSTEMPATH\Session\Session.php(192): CodeIgniter\Cookie\Cookie->__construct('ci_session', '', [...])
+ 4 SYSTEMPATH\Config\Services.php(689): CodeIgniter\Session\Session->__construct(Object(CodeIgniter\Session\Handlers\FileHandler), Object(Config\Session))
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 6 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 9 APPPATH\Controllers\Usuario\Autenticacion.php(136): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Usuario\Autenticacion->IniciarSesion()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Autenticacion))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Proyectos\\NotasRapidasOnLine\\public\\index.php')
+INFO - 2024-02-08 09:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 09:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 10:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 10:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 10:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 10:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 10:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 10:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-08 10:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-08 10:51:22 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2024-02-08 10:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
