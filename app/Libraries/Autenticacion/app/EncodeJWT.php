@@ -18,6 +18,5 @@ class EncodeJWT extends EnDeJwtBase{
         $this->objeto_jwt = new ObjetoJwt();
         $this ->configuracion = $configuracion;
         $this->configuracion->SetSub($correo);
-
     }
 }
